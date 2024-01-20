@@ -1,0 +1,300 @@
+﻿@model PessoaFisica.ViewsModel.PessoaCreateViewsModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<section class="content-header" style="margin:16px;">
+<!-- Horizontal Form -->
+<div class="card card-danger">
+    <div class="card-header">
+                <h3 class="card-title">Cadastrar Pessoa Física</h3>
+              </div>
+    <div class="card-body">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <h3>Dados Pessoais</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Nome" class="control-label"></label>
+                        <input asp-for="Nome" class="form-control" />
+                        <span asp-validation-for="Nome" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Sobrenome" class="control-label"></label>
+                        <input asp-for="Sobrenome" class="form-control" />
+                        <span asp-validation-for="Sobrenome" class="text-danger"></span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="DataNascimento" class="control-label"></label>
+                        <input asp-for="DataNascimento" class="form-control" />
+                        <span asp-validation-for="DataNascimento" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="RG" class="control-label"></label>
+                        <input asp-for="RG" class="form-control" />
+                        <span asp-validation-for="RG" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="CPF" class="control-label"></label>
+                        <input asp-for="CPF" class="form-control" />
+                        <span asp-validation-for="CPF" class="text-danger"></span>
+                    </div>  
+                </div>
+            </div>
+          
+
+            <h3>Endereço 1</h3>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Logradouro1" class="control-label"></label>
+                        <input asp-for="Logradouro1" class="form-control" />
+                        <span asp-validation-for="Logradouro1" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="CEP1" class="control-label"></label>
+                        <input asp-for="CEP1" class="form-control" />
+                        <span asp-validation-for="CEP1" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="Numero1" class="control-label"></label>
+                        <input asp-for="Numero1" class="form-control" />
+                        <span asp-validation-for="Numero1" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label asp-for="Complemento1" class="control-label"></label>
+                    <input asp-for="Complemento1" class="form-control" />
+                    <span asp-validation-for="Complemento1" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Cidade1" class="control-label"></label>
+                    <input asp-for="Cidade1" class="form-control" />
+                    <span asp-validation-for="Cidade1" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                        <label>Selecionar estado</label>
+                        <select asp-for="Estado1" class="form-control">
+                          <option>AC</option>
+                          <option>AL</option>
+                          <option>AP</option>
+                          <option>AM</option>
+                          <option>BA</option>
+                          <option>CE</option>
+                          <option>DF</option>
+                          <option>ES</option>
+                          <option>GO</option>
+                          <option>MA</option>
+                          <option>MT</option>
+                          <option>MS</option>
+                          <option>MG</option>
+                          <option>PA</option>
+                          <option>PB</option>
+                          <option>PR</option>
+                          <option>PE</option>
+                          <option>PI</option>
+                          <option>RJ</option>
+                          <option>RN</option>
+                           <option>RS</option>
+                          <option>RO</option>
+                          <option>RR</option>
+                          <option>SC</option>
+                          <option>SP</option>
+                          <option>SE</option>
+                          <option>TO</option>
+                        </select>
+                        <span asp-validation-for="Estado1" class="text-danger"></span>
+                </div>
+            </div>
+            </div>
+
+            <h3>Endereço 2 (Não Obrigatório)</h3>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Logradouro2" class="control-label"></label>
+                        <input asp-for="Logradouro2" class="form-control" />
+                        <span asp-validation-for="Logradouro2" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="CEP2" class="control-label"></label>
+                        <input asp-for="CEP2" class="form-control" />
+                        <span asp-validation-for="CEP2" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="Numero2" class="control-label"></label>
+                        <input asp-for="Numero2" class="form-control" />
+                        <span asp-validation-for="Numero2" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label asp-for="Complemento2" class="control-label"></label>
+                    <input asp-for="Complemento2" class="form-control" />
+                    <span asp-validation-for="Complemento2" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Cidade2" class="control-label"></label>
+                    <input asp-for="Cidade2" class="form-control" />
+                    <span asp-validation-for="Cidade2" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                        <label>Selecionar estado</label>
+                        <select asp-for="Estado2" class="form-control">
+                          <option>AC</option>
+                          <option>AL</option>
+                          <option>AP</option>
+                          <option>AM</option>
+                          <option>BA</option>
+                          <option>CE</option>
+                          <option>DF</option>
+                          <option>ES</option>
+                          <option>GO</option>
+                          <option>MA</option>
+                          <option>MT</option>
+                          <option>MS</option>
+                          <option>MG</option>
+                          <option>PA</option>
+                          <option>PB</option>
+                          <option>PR</option>
+                          <option>PE</option>
+                          <option>PI</option>
+                          <option>RJ</option>
+                          <option>RN</option>
+                           <option>RS</option>
+                          <option>RO</option>
+                          <option>RR</option>
+                          <option>SC</option>
+                          <option>SP</option>
+                          <option>SE</option>
+                          <option>TO</option>
+                        </select>
+                        <span asp-validation-for="Estado2" class="text-danger"></span>
+                </div>
+            </div>
+            
+            </div>
+
+            <h3>Contato 1</h3>
+
+            <div class="row">
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label asp-for="Nome1" class="control-label"></label>
+                    <input asp-for="Nome1" class="form-control" />
+                    <span asp-validation-for="Nome1" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="ValorContato1" class="control-label"></label>
+                    <input asp-for="ValorContato1" class="form-control" />
+                    <span asp-validation-for="ValorContato1" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                        <label>Selecionar tipo de contato</label>
+                        <select asp-for="TipoContato1" class="form-control">
+                           <option value="">Selecionar</option>
+                          <option>Email</option>
+                          <option>Telefone</option>
+                        </select>
+                        <span asp-validation-for="TipoContato1" class="text-danger"></span>
+                </div>
+            </div>
+            </div>
+
+            <h3>Contato 2 (Não Obrigatório)</h3>
+
+            <div class="row">
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label asp-for="Nome2" class="control-label"></label>
+                    <input asp-for="Nome2" class="form-control" />
+                    <span asp-validation-for="Nome2" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="ValorContato2" class="control-label"></label>
+                    <input asp-for="ValorContato2" class="form-control" />
+                    <span asp-validation-for="ValorContato2" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                        <label>Selecionar tipo de contato</label>
+                        <select asp-for="TipoContato2" class="form-control">
+                           <option value="">Selecionar</option>
+                          <option>Email</option>
+                          <option>Telefone</option>
+                        </select>
+                        <span asp-validation-for="TipoContato2" class="text-danger"></span>
+                </div>
+            </div>
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+</section>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
